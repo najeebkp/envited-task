@@ -1,0 +1,131 @@
+.landing-page-wrapper {
+  background-color: #f6f2ff;
+  &.white-background {
+    background-color: white;
+  }
+  .image-wrapper {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    img {
+      height: 90%;
+      width: auto;
+
+      box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 29px 0px;
+      border-radius: 25px;
+    }
+  }
+  col {
+    justify-content: center;
+    align-items: center;
+  }
+  .row {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right-side {
+    text-align: end;
+    order: 1;
+  }
+  .header {
+    font-size: 45px;
+    line-height: 42px;
+    text-align: -webkit-right;
+    font-weight: 800;
+    color: #240d57;
+    text-shadow: 3px 2px 1px #e0e0e0;
+    padding-bottom: 10px;
+  }
+  .gradient-text {
+    background: rgb(80, 31, 193);
+    width: fit-content;
+    background: linear-gradient(
+      90deg,
+      rgb(132, 86, 236) 0%,
+      rgba(232, 123, 248, 1) 90%
+    );
+    text-shadow: none;
+    filter: drop-shadow(3px 2px 1px #e0e0e0);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+  .desc {
+    font-size: 18px;
+    text-align: right;
+    color: #4f4f4f;
+    line-height: 22px;
+    text-shadow: 3px 2px 1px #e0e0e0;
+  }
+  .button-wrapper {
+    &.mobile {
+      display: none;
+    }
+  }
+}
+.button {
+  background: linear-gradient(
+    90deg,
+    rgb(132, 86, 236) 0%,
+    rgba(232, 123, 248, 1) 90%
+  );
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 7px 40px;
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      rgb(128, 78, 245) 0%,
+      rgb(228, 96, 248) 90%
+    );
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .landing-page-wrapper {
+    padding: 100px 0;
+    .left-side {
+      order: 2;
+    }
+    .row {
+      flex-direction: column;
+    }
+    .right-side {
+      text-align: center;
+
+      .header {
+        text-align: center;
+      }
+      .desc {
+        padding-top: 10px;
+        text-align: center;
+        font-size: 13px;
+        line-height: 15px;
+      }
+      .gradient-text {
+        width: auto;
+      }
+    }
+    .image-wrapper {
+      // padding: 20px;
+      height: 80vh;
+
+      img {
+        height: 90%;
+      }
+    }
+    .button-wrapper {
+      &.web {
+        display: none;
+      }
+      &.mobile {
+        display: block;
+      }
+    }
+  }
+}
